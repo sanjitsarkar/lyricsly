@@ -152,6 +152,7 @@ class SongInfoCard extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.white),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.end,
           children: [
             roundedArtistImage(),
             SizedBox(
@@ -165,16 +166,19 @@ class SongInfoCard extends StatelessWidget {
               customIcon(
                   color: Colors.blueAccent,
                   iconData: Icons.verified,
-                  tooltip: "Verified"),
+                  tooltip: "Verified",
+                  space: 10),
             if (songInfo.artist.isMemeVerified)
               customIcon(
                   color: Colors.redAccent,
                   iconData: Icons.emoji_emotions,
-                  tooltip: "Meme Verified"),
+                  tooltip: "Meme Verified",
+                  space: 10),
             if (songInfo.stats!.isHot)
               customIcon(
                   color: Colors.amber.shade900,
                   iconData: Icons.local_fire_department_sharp,
+                  space: 10,
                   tooltip: "Hot"),
             viewsSection()
           ],
@@ -186,7 +190,8 @@ class SongInfoCard extends StatelessWidget {
   Row customIcon(
       {required String tooltip,
       required IconData iconData,
-      required Color color}) {
+      required Color color,
+      required double space}) {
     return Row(
       children: [
         IconButton(
@@ -198,7 +203,7 @@ class SongInfoCard extends StatelessWidget {
           color: color,
         ),
         SizedBox(
-          width: 5,
+          width: space,
         ),
       ],
     );
@@ -233,6 +238,7 @@ class SongInfoCard extends StatelessWidget {
 
   Flexible artistName() {
     return Flexible(
+      fit: FlexFit.tight,
       child: InkWell(
         onTap: () {
           Get.toNamed("/lyrics" + Routes.ARTIST_DETAILS, arguments: [
