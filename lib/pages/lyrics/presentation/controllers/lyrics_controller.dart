@@ -10,7 +10,6 @@ class LyricsController extends SuperController<List<SongInfo>> {
   final ILyricsRepository lyricsRepository;
   RxList<SongInfo> songInfos = RxList.empty();
   RxBool loading = RxBool(false);
-  RxInt progress = RxInt(0);
   Rx<String> label = "Search any Song".obs;
   Rx<TextEditingController> search = TextEditingController().obs;
   @override
