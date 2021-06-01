@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
@@ -117,7 +118,7 @@ class SongInfoCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(
-                image: NetworkImage(songInfo.songArtUrl),
+                image: CachedNetworkImageProvider(songInfo.songArtUrl),
                 colorFilter: ColorFilter.mode(
                     colorConvert(songInfo.songArtSecondaryColor),
                     BlendMode.multiply),
@@ -264,9 +265,9 @@ class SongInfoCard extends StatelessWidget {
             color: colorConvert(songInfo.songArtPrimaryColor),
             shape: BoxShape.circle),
         child: ClipOval(
-          child: FadeInImage.assetNetwork(
-            placeholder: "assets/loader.gif",
-            image: songInfo.artist.artistImage,
+          child: FadeInImage(
+            placeholder: AssetImage("assets/loader.gif"),
+            image: CachedNetworkImageProvider(songInfo.artist.artistImage),
             fit: BoxFit.cover,
             height: 42,
             width: 42,
@@ -325,9 +326,14 @@ class SongInfoCard extends StatelessWidget {
           shape: BoxShape.circle,
           color: colorConvert(songInfo.songArtPrimaryColor)),
       child: ClipOval(
-        child: FadeInImage.assetNetwork(
-          placeholder: "assets/loader.gif",
-          image: songInfo.songArtUrl,
+        child: FadeInImage(
+          placeholder: AssetImage("assets/loader.gif"),
+          image: CachedNetworkImageProvider(
+            songInfo.songArtUrl,
+            errorListener: () {
+              print("error");
+            },
+          ),
           width: w(context) * .3 - 7,
           height: w(context) * .3 - 7,
           fit: BoxFit.cover,
