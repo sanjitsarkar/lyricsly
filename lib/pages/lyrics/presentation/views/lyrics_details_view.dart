@@ -16,6 +16,7 @@ class LyricsDetailsView extends GetWidget<LyricsController> {
     return Scaffold(
         extendBody: true,
         appBar: AppBar(
+          centerTitle: true,
           title: Text(songInfo.songTitle,
               style: TextStyle(
                   // color: colorConvert(songInfo.songArtPrimaryColor),
