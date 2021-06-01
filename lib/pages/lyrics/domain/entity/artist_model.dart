@@ -7,6 +7,7 @@ class Artist {
   String artistInfoUrl;
   bool isVerified;
   bool isMemeVerified;
+  String artistUrl;
   int iq;
   Artist({
     required this.artistName,
@@ -15,6 +16,7 @@ class Artist {
     required this.artistInfoUrl,
     required this.isVerified,
     required this.isMemeVerified,
+    required this.artistUrl,
     required this.iq,
   });
 
@@ -25,6 +27,7 @@ class Artist {
     String? artistInfoUrl,
     bool? isVerified,
     bool? isMemeVerified,
+    String? artistUrl,
     int? iq,
   }) {
     return Artist(
@@ -34,6 +37,7 @@ class Artist {
       artistInfoUrl: artistInfoUrl ?? this.artistInfoUrl,
       isVerified: isVerified ?? this.isVerified,
       isMemeVerified: isMemeVerified ?? this.isMemeVerified,
+      artistUrl: artistUrl ?? this.artistUrl,
       iq: iq ?? this.iq,
     );
   }
@@ -46,20 +50,21 @@ class Artist {
       'artistInfoUrl': artistInfoUrl,
       'isVerified': isVerified,
       'isMemeVerified': isMemeVerified,
+      'artistUrl': artistUrl,
       'iq': iq,
     };
   }
 
   factory Artist.fromMap(Map<String, dynamic> map) {
     return Artist(
-      artistName: map['name'],
-      artistImage: map['image_url'],
-      artistId: map['id'],
-      artistInfoUrl: map['url'],
-      isVerified: map['is_verified'],
-      isMemeVerified: map['is_meme_verified'],
-      iq: map['iq'] ?? 0,
-    );
+        artistName: map['name'],
+        artistImage: map['image_url'],
+        artistId: map['id'],
+        artistInfoUrl: map['url'],
+        isVerified: map['is_verified'],
+        isMemeVerified: map['is_meme_verified'],
+        iq: map['iq'] ?? 0,
+        artistUrl: map['url']);
   }
 
   String toJson() => json.encode(toMap());
@@ -68,7 +73,7 @@ class Artist {
 
   @override
   String toString() {
-    return 'Artist(artistName: $artistName, artistImage: $artistImage, artistId: $artistId, artistInfoUrl: $artistInfoUrl, isVerified: $isVerified, isMemeVerified: $isMemeVerified, iq: $iq)';
+    return 'Artist(artistName: $artistName, artistImage: $artistImage, artistId: $artistId, artistInfoUrl: $artistInfoUrl, isVerified: $isVerified, isMemeVerified: $isMemeVerified, artistUrl: $artistUrl, iq: $iq)';
   }
 
   @override
@@ -82,6 +87,7 @@ class Artist {
         other.artistInfoUrl == artistInfoUrl &&
         other.isVerified == isVerified &&
         other.isMemeVerified == isMemeVerified &&
+        other.artistUrl == artistUrl &&
         other.iq == iq;
   }
 
@@ -93,6 +99,7 @@ class Artist {
         artistInfoUrl.hashCode ^
         isVerified.hashCode ^
         isMemeVerified.hashCode ^
+        artistUrl.hashCode ^
         iq.hashCode;
   }
 }

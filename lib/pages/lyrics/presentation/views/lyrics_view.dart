@@ -235,7 +235,10 @@ class SongInfoCard extends StatelessWidget {
     return Flexible(
       child: InkWell(
         onTap: () {
-          Get.toNamed("/lyrics" + Routes.ARTIST_DETAILS);
+          Get.toNamed("/lyrics" + Routes.ARTIST_DETAILS, arguments: [
+            songInfo.artist.artistName,
+            songInfo.artist.artistUrl
+          ]);
         },
         child: Text(
           songInfo.artist.artistName,
@@ -253,7 +256,8 @@ class SongInfoCard extends StatelessWidget {
   InkWell roundedArtistImage() {
     return InkWell(
       onTap: () {
-        Get.toNamed("/lyrics" + Routes.ARTIST_DETAILS);
+        Get.toNamed("/lyrics" + Routes.ARTIST_DETAILS,
+            arguments: [songInfo.artist.artistName, songInfo.artist.artistUrl]);
       },
       child: Container(
         padding: EdgeInsets.all(3),
