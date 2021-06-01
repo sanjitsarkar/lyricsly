@@ -1,5 +1,5 @@
-import 'package:get_example/pages/lyrics/domain/adapters/repository_adapter.dart';
-import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
+import 'package:lyricsly/pages/lyrics/domain/adapters/repository_adapter.dart';
+import 'package:lyricsly/pages/lyrics/domain/entity/song_info_model.dart';
 
 import 'lyrics_api_provider.dart';
 

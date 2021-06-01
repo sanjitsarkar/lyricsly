@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
+import 'package:lyricsly/pages/lyrics/domain/entity/song_info_model.dart';
+
 // ignore: one_member_abstracts
 abstract class ILyricsProvider {
   Future<Response<List<SongInfo>>> getSongInfo(String path, String search);
@@ -9,7 +10,6 @@ class LyricsProvider extends GetConnect implements ILyricsProvider {
   @override
   void onInit() {
     httpClient.defaultDecoder = (val) {
-      
       return List<SongInfo>.from(
           val["response"]["hits"].map((x) => SongInfo.fromMap(x["result"])));
     };

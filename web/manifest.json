@@ -1,6 +1,6 @@
 {
-    "name": "get_example",
-    "short_name": "get_example",
+    "name": "lyricsly",
+    "short_name": "lyricsly",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

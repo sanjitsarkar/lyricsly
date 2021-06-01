@@ -1,10 +1,8 @@
-
-
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/data/lyrics_api_provider.dart';
-import 'package:get_example/pages/lyrics/data/lyrics_repository.dart';
-import 'package:get_example/pages/lyrics/domain/adapters/repository_adapter.dart';
-import 'package:get_example/pages/lyrics/presentation/controllers/lyrics_controller.dart';
+import 'package:lyricsly/pages/lyrics/data/lyrics_api_provider.dart';
+import 'package:lyricsly/pages/lyrics/data/lyrics_repository.dart';
+import 'package:lyricsly/pages/lyrics/domain/adapters/repository_adapter.dart';
+import 'package:lyricsly/pages/lyrics/presentation/controllers/lyrics_controller.dart';
 
 class LyricsBinding extends Bindings {
   @override

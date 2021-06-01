@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
-import 'package:get_example/pages/lyrics/presentation/controllers/lyrics_controller.dart';
-import 'package:get_example/shared/colors.dart';
-import 'package:get_example/shared/constants.dart';
+import 'package:lyricsly/pages/lyrics/domain/entity/song_info_model.dart';
+import 'package:lyricsly/pages/lyrics/presentation/controllers/lyrics_controller.dart';
+import 'package:lyricsly/shared/colors.dart';
+import 'package:lyricsly/shared/constants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class LyricsDetailsView extends GetWidget<LyricsController> {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
+import 'package:lyricsly/pages/lyrics/domain/entity/song_info_model.dart';
 
 import '../../domain/adapters/repository_adapter.dart';
 

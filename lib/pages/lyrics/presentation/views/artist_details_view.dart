@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
-import 'package:get_example/pages/lyrics/presentation/controllers/lyrics_controller.dart';
+import 'package:lyricsly/pages/lyrics/domain/entity/song_info_model.dart';
+import 'package:lyricsly/pages/lyrics/presentation/controllers/lyrics_controller.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ArtistDetailsView extends GetWidget<LyricsController> {

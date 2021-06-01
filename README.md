@@ -1,4 +1,4 @@
-# get_example
+# lyricsly
 
 A new Flutter project.
 

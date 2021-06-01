@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/domain/entity/song_info_model.dart';
-import 'package:get_example/pages/lyrics/presentation/controllers/lyrics_controller.dart';
-import 'package:get_example/routes/app_pages.dart';
-import 'package:get_example/shared/colors.dart';
-import 'package:get_example/shared/constants.dart';
+import 'package:lyricsly/pages/lyrics/domain/entity/song_info_model.dart';
+import 'package:lyricsly/pages/lyrics/presentation/controllers/lyrics_controller.dart';
+import 'package:lyricsly/routes/app_pages.dart';
+import 'package:lyricsly/shared/colors.dart';
+import 'package:lyricsly/shared/constants.dart';
 
 class LyricsView extends GetWidget<LyricsController> {
   @override

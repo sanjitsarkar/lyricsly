@@ -1,12 +1,11 @@
 import 'package:get/get.dart';
-import 'package:get_example/pages/lyrics/bindings/lyrics_binding.dart';
-import 'package:get_example/pages/lyrics/presentation/views/artist_details_view.dart';
-import 'package:get_example/pages/lyrics/presentation/views/lyrics_details_view.dart';
-import 'package:get_example/pages/lyrics/presentation/views/lyrics_view.dart';
+import 'package:lyricsly/pages/lyrics/bindings/lyrics_binding.dart';
+import 'package:lyricsly/pages/lyrics/presentation/views/artist_details_view.dart';
+import 'package:lyricsly/pages/lyrics/presentation/views/lyrics_details_view.dart';
+import 'package:lyricsly/pages/lyrics/presentation/views/lyrics_view.dart';
 
 part 'app_routes.dart';
 
-// ignore: avoid_classes_with_only_static_members
 class AppPages {
   static const INITIAL = Routes.LYRICS;
 
@@ -19,6 +18,5 @@ class AppPages {
           GetPage(name: Routes.LYRICS_DEATILS, page: () => LyricsDetailsView()),
           GetPage(name: Routes.ARTIST_DETAILS, page: () => ArtistDetailsView()),
         ]),
-  
   ];
 }
