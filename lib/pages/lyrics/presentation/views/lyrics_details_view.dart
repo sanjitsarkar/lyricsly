@@ -31,7 +31,8 @@ class LyricsDetailsView extends GetWidget<LyricsController> {
                   },
                 ),
                 if (controller.progress.value != 100)
-                  Center(child: Image.asset("assets/loader.gif")),
+                  Center(
+                      child: ClipOval(child: Image.asset("assets/loader.gif"))),
               ],
             )));
   }
